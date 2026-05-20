@@ -57,18 +57,7 @@ We want to:
 2. <outcome 2>
 ...
 
-## Context & references
-
-<Anything the implementer will want at their fingertips during the build. Links, file paths, transcripts, prior art, example outputs, screenshots, design docs. One bullet per item with a short note on why it's useful. Delete this section if nothing relevant exists - don't leave it as a stub.>
-
-- [<title>](<url-or-path>) - <why it matters / what the implementer should look at>
-- `path/to/relevant/file.ts` - <what's in here that the build will need>
-- ...
-
-## Non-goals
-
-- <thing we explicitly are not doing, with the reason or where it is tracked separately>
-- ...
+**Success metric:** <one specific, measurable thing that will be true if this build works. From the 5-Whys at the start of scoping. Omit only if the user said "for fun" or "exploration".>
 
 ## Decisions captured (from scoping conversation)
 
@@ -106,29 +95,51 @@ Run before merging:
 - [ ] Whatever this project's standard pre-merge check is (build / type-check / tests). If the project has no test suite, manual smoke checks are fine.
 - [ ] Manual smoke checks specific to the feature
 
-## Out of scope, but worth flagging during implementation
+## Out of scope / future additions
 
-1. <adjacent thing that may surface; how to handle if it does>
-2. ...
+One combined list. Each line is either:
+- A deliberate "we're not doing this" (with reason - prevents scope creep), OR
+- A deferred "future PRD when X" (with trigger - prevents silently dropped work)
+
+Examples:
+- Multi-step branching form - *deliberate; one page only for v1*
+- A/B testing the question set - *deferred; separate PRD when v1 has 50 submissions*
 
 ## Open questions to resolve during implementation
 
 - <question only the implementer can answer in-flight>
 - ...
+
+## Pre-mortem flags
+
+Run after the rest of the doc is drafted. Two dimensions:
+
+**Technical risks (will the build itself fail?):**
+- <e.g. "Kit API rate limit hit if we submit during a campaign send - need to verify in M2">
+
+**Strategic risks (will the build achieve the success metric even if it ships?):**
+- <e.g. "Form may not change discovery-call time if buyers ignore the routing and book a call anyway">
+
+For each flag, name the milestone or open question that will catch it.
 ```
 
 ## Process
 
 1. **Confirm the scope.** Before asking anything else, confirm in one sentence what you understood the user wants to PRD. If they used a vague handle ("the upsell thing", "the auth refactor"), restate it concretely.
-2. **Read existing context.** Skim files the PRD will touch (the page, the API endpoint, the data file). One or two `Read` / `grep` calls. Enough to ground the questions, not a full audit.
-3. **Skim ONE existing PRD as a tone reference** if the project has prior PRDs - look for `*-prd.md` files in `docs/` and read the most recent or most similar in scope. If the project has no prior PRDs, the template above is the reference.
-4. **Ask clarifying questions in batches** with `AskUserQuestion`. Group decisions that shape the structure of the doc (scope boundaries, framing, what's in vs deferred). Max 4 questions per round; keep options mutually exclusive (or use `multiSelect` when truly orthogonal). Two rounds is the norm; three is fine if the topic is genuinely big. One round is acceptable if the scope is tight.
-5. **Ask explicitly for context the implementer will want at hand.** A separate beat from the decision questions - the answer is *material*, not a choice. Prompt: *"Are there any links, files, transcripts, design refs, prior PRs, or example outputs you want me to pin into a 'Context & references' section for the implementer to open during the build? Drop them in now."* Capture each as a bullet under "Context & references" with a one-line note on why it's relevant. If the user has nothing, delete the section in the final draft.
+2. **Probe the underlying goal.** Before scoping the build, dig into *why* the user wants it. Run a light 5-Whys exercise to surface the real outcome. Push for a measurable success metric (e.g. "cut discovery-call qualification time by 50%", "convert 3 more team-tier deals per month"). Capture this as the **Success metric** line under Problem. **Exception:** if the user explicitly says "just for fun", "exploration", or "I'm learning", skip the metric and note that the build is exploratory.
+3. **Read existing context.** Skim files the PRD will touch (the page, the API endpoint, the data file). One or two `Read` / `grep` calls. Enough to ground the questions, not a full audit.
+4. **Skim ONE existing PRD as a tone reference** if the project has prior PRDs - look for `*-prd.md` files in `docs/` and read the most recent or most similar in scope. If the project has no prior PRDs, the template above is the reference.
+5. **Ask clarifying questions in batches** with `AskUserQuestion`. Group decisions that shape the structure of the doc (scope boundaries, framing, what's in vs deferred). Max 4 questions per round; keep options mutually exclusive (or use `multiSelect` when truly orthogonal). Two rounds is the norm; three is fine if the topic is genuinely big. One round is acceptable if the scope is tight.
 6. **Convert each answered question into a row in the Decisions captured table.** This is the contract: every decision the user made is visible at the top of the doc.
 7. **Draft the milestones.** Order them by dependency. State the dependency graph in one line at the top of the milestones section. Within a milestone, every line must be a checkable thing - no narrative prose between checkboxes (a single one-line purpose under the heading is fine).
 8. **Write the PRD** to a sensible project path. See "Where to save" below.
-9. **Update the project's docs index** if one exists. Look for `docs/index.md` (or a similar catalogue file) and add a wiki-link entry under the appropriate section.
-10. **End-of-turn summary:** one or two sentences naming the file path and the milestone count. No more.
+9. **Run a pre-mortem.** After the doc is drafted, imagine the build has failed and walk back from that. Surface risks in two dimensions:
+   - **Technical:** will the implementation itself fail? (API rate limits, missing context, environment quirks, edge cases the milestones don't cover)
+   - **Strategic:** even if it ships cleanly, will it achieve the Success metric? (wrong user assumption, missing distribution, depends on a behaviour change that won't happen)
+
+   Write the flags into the **Pre-mortem flags** section of the PRD. For each flag, point to the milestone or open question that will catch it. Then present the flags back to the user and ask explicitly: "Want to do a revision pass before handing this to a build agent?" If they say yes, loop back to step 5 with the pre-mortem as input.
+10. **Update the project's docs index** if one exists. Look for `docs/index.md` (or a similar catalogue file) and add a wiki-link entry under the appropriate section.
+11. **End-of-turn summary:** one or two sentences naming the file path and the milestone count. No more.
 
 ## Where to save
 
@@ -139,14 +150,15 @@ Filename convention: `kebab-case-prd.md`. Lowercase. The `-prd.md` suffix is loa
 
 ## Things to get right
 
+- **Success metric is mandatory unless the user said "for fun".** Without a measurable success line, the pre-mortem can't catch strategic risks. If you can't land on a metric in the 5-Whys, that's a sign the build isn't ready to scope - say so.
 - **Every milestone item is a discrete check.** "Update the hero" is not a check; "Hero pill copy: 'Next live cohort: late June 2026'" is.
 - **State copy verbatim in the PRD** when copy is part of the deliverable. Don't write "update the hero copy"; write the exact line. The PRD is the source of truth so the implementer doesn't re-decide the wording mid-PR.
 - **Include line numbers** when referring to specific spots in existing files (e.g. `path/to/file.ts:142`). A PRD that says "the CTA block" without coordinates costs an extra grep at implementation time.
 - **The decisions table is non-negotiable.** Every clarification you asked must appear there. If a decision was implied (not asked), still capture it in the table so the implementer can challenge it later.
 - **Milestones over PRs.** Default to milestones (M1, M2, ...). Only switch to PR-numbered sections (PR 1, PR 2a, ...) when the work clearly spans multiple deployable shipments and the user has confirmed that intent.
 - **The verification milestone is mandatory.** Even small PRDs end with an M<N> that is the merge gate. Pulls together whatever this project's standard pre-merge check is plus feature-specific manual smoke.
-- **Out-of-scope must say where the deferred thing is tracked** ("self-paced upsell - separate PRD, TBC") so the doc doesn't quietly drop work.
-- **Context & references is for the implementer, not the reviewer.** Every bullet should be something the agent or developer will actually open during the build (design ref, prior PRD, transcript, example output, screenshot, data file). If a link is only there to justify the scope, it belongs in the Problem section, not here. If the user provides no context, delete the section rather than leaving an empty placeholder.
+- **Out of scope / future additions is one combined list.** Each line is either deliberate ("we're not doing this") or deferred ("future PRD when X"). Label which. Never split into two sections - participants confuse them and end up with overlap.
+- **Pre-mortem must hit both dimensions.** Technical risks (will it ship?) and strategic risks (will it hit the metric even if it ships?). A pre-mortem that only flags technical risks is a half-pre-mortem. Each flag must point to a milestone or open question that catches it.
 
 ## Things to avoid
 
