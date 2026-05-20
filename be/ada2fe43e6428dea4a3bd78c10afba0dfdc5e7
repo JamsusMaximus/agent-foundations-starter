@@ -1,0 +1,22 @@
+skills/owasp-security-check/SOURCE.md
+  s_4eeb903cb2e427::t_5a4f8ec4d57577 1-39
+skills/README.md
+  s_4eeb903cb2e427::t_39bf3e3b658cc7 7,11-13
+  s_4eeb903cb2e427::t_907904a23a78cd 28,30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.10",
+  "base_commit_sha": "beada2fe43e6428dea4a3bd78c10afba0dfdc5e7",
+  "prompts": {},
+  "sessions": {
+    "s_4eeb903cb2e427": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1fe4ffc3-b196-40c2-95cd-7e12a80bc01e",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "James McAulay <hello@jamesmcaulay.co.uk>"
+    }
+  }
+}
