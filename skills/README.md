@@ -8,7 +8,7 @@ We're shipping a few skills so you can see the format and use them from day one.
 
 ## What's here
 
-- `humanise-writing/SKILL.md` - a Week-1 starter skill that activates when you ask the agent to review or improve a piece of writing. Strips AI tells (em dashes, rhetorical reversals, generic adjectives) and pushes for sharper, more human copy. Useful for emails, LinkedIn posts, internal comms, anything you'd be embarrassed to ship as obviously AI-generated.
+- `humanizer/SKILL.md` - vendored from [blader/humanizer](https://github.com/blader/humanizer) (MIT, attribution in `humanizer/SOURCE.md`). Activates when you ask the agent to review or improve a piece of writing. Strips the full catalogue of AI tells (em dashes, rule of three, vague attributions, inflated symbolism, negative parallelisms, AI vocabulary) using Wikipedia's "Signs of AI writing" guide as the rulebook. Useful for emails, LinkedIn posts, internal comms, anything you'd be embarrassed to ship as obviously AI-generated.
 - `prd/SKILL.md` - the skill you'll meet properly in **Week 4 (Coding Agent)**. Triggers on "PRD this", "let's draft a PRD", or `/prd <topic>`. Produces a milestone-checkbox planning doc with a decisions table at the top, then stops - so you can hand the PRD to a coding agent in a separate turn. Drafts only; does NOT implement.
 - `owasp-security-check/SKILL.md` - vendored from [sergiodxa/agent-skills](https://github.com/sergiodxa/agent-skills) (MIT, attribution in `owasp-security-check/SOURCE.md`). Runs a structured pass over a codebase using OWASP Top-10 rules in `owasp-security-check/rules/`. Useful before sharing a build with anyone - catches hardcoded API keys, missing auth checks, insecure CORS, and other common production-killers.
 
