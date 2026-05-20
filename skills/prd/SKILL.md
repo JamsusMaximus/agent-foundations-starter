@@ -4,7 +4,7 @@ description: |
   Draft a Product Requirements Document (PRD) using a milestone-checkbox
   format: problem, non-goals, decisions captured, milestones with
   checkboxes, verification, out-of-scope, open questions. Use when the user
-  says "PRD this", "let's draft a PRD", "/prd <topic>", "write a PRD for X",
+  says "PRD this", "let's draft a PRD", "/prd [topic]", "write a PRD for X",
   "scope X as a PRD", or any framing where the deliverable is a planning
   doc that will guide implementation. Does NOT implement; PRD-only. The
   output is always a milestone-chunked, checkbox-driven doc that an
