@@ -1,0 +1,21 @@
+skills/humanizer/SKILL.md
+  s_4eeb903cb2e427::t_23fa395e5f4b9d 34-37
+skills/humanizer/SOURCE.md
+  s_4eeb903cb2e427::t_c60013462c255d 9-10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.10",
+  "base_commit_sha": "bcc35f68d2c9559da455fe3e7bf5386bbc59b049",
+  "prompts": {},
+  "sessions": {
+    "s_4eeb903cb2e427": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1fe4ffc3-b196-40c2-95cd-7e12a80bc01e",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "James McAulay <hello@jamesmcaulay.co.uk>"
+    }
+  }
+}
