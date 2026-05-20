@@ -6,7 +6,8 @@ This skill is vendored from [blader/humanizer](https://github.com/blader/humaniz
 
 - **Author:** Siqi Chen ([@blader](https://github.com/blader))
 - **Upstream:** https://github.com/blader/humanizer
-- **Version vendored:** v2.5.1 (copied 2026-05-20 from upstream `main`). No modifications by this repo - shipped as-is.
+- **Version vendored:** v2.5.1 (copied 2026-05-20 from upstream `main`).
+- **Local modifications:** two additions to the "Your Task" checklist - (5) "Use British English" and (8) "Do a quality pass" (covers throwaway transitions, dead-air connectors, dead flat closers). Everything else is upstream as-is.
 
 If you want the canonical version (or to file issues), use the upstream. We re-ship it here only so that cloning this starter folder gives you the skill without a separate install step.
 

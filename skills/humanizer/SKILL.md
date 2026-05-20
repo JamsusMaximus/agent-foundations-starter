@@ -31,8 +31,10 @@ When given text to humanize:
 2. **Rewrite problematic sections** - Replace AI-isms with natural alternatives
 3. **Preserve meaning** - Keep the core message intact
 4. **Maintain voice** - Match the intended tone (formal, casual, technical, etc.)
-5. **Add soul** - Don't just remove bad patterns; inject actual personality
-6. **Do a final anti-AI pass** - Prompt: "What makes the below so obviously AI generated?" Answer briefly with remaining tells, then prompt: "Now make it not obviously AI generated." and revise
+5. **Use British English** - Default to British spelling and conventions (colour, organisation, programme, personalised, etc.) unless the source text is clearly written in American English
+6. **Add soul** - Don't just remove bad patterns; inject actual personality
+7. **Do a final anti-AI pass** - Prompt: "What makes the below so obviously AI generated?" Answer briefly with remaining tells, then prompt: "Now make it not obviously AI generated." and revise
+8. **Do a quality pass** - Read every sentence as a reader, not an editor. Ask: "Does this sentence earn its place? Would a good writer leave this in?" Cut throwaway transitions ("He left to build X"), dead-air connectors ("He spent the next fifteen years behind the camera"), and any sentence that exists only to get from A to B. If the next section already makes the point, the transition is dead weight. Watch for dead flat closers - sentences that state an important fact with zero energy at the end of a paragraph ("Creators retain 50% of the IP in their projects."). If a fact is interesting, weave it into the flow rather than tacking it on.
 
 
 ## Voice Calibration (Optional)
