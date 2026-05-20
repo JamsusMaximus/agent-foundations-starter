@@ -57,6 +57,14 @@ We want to:
 2. <outcome 2>
 ...
 
+## Context & references
+
+<Anything the implementer will want at their fingertips during the build. Links, file paths, transcripts, prior art, example outputs, screenshots, design docs. One bullet per item with a short note on why it's useful. Delete this section if nothing relevant exists - don't leave it as a stub.>
+
+- [<title>](<url-or-path>) - <why it matters / what the implementer should look at>
+- `path/to/relevant/file.ts` - <what's in here that the build will need>
+- ...
+
 ## Non-goals
 
 - <thing we explicitly are not doing, with the reason or where it is tracked separately>
@@ -115,11 +123,12 @@ Run before merging:
 2. **Read existing context.** Skim files the PRD will touch (the page, the API endpoint, the data file). One or two `Read` / `grep` calls. Enough to ground the questions, not a full audit.
 3. **Skim ONE existing PRD as a tone reference** if the project has prior PRDs - look for `*-prd.md` files in `docs/` and read the most recent or most similar in scope. If the project has no prior PRDs, the template above is the reference.
 4. **Ask clarifying questions in batches** with `AskUserQuestion`. Group decisions that shape the structure of the doc (scope boundaries, framing, what's in vs deferred). Max 4 questions per round; keep options mutually exclusive (or use `multiSelect` when truly orthogonal). Two rounds is the norm; three is fine if the topic is genuinely big. One round is acceptable if the scope is tight.
-5. **Convert each answered question into a row in the Decisions captured table.** This is the contract: every decision the user made is visible at the top of the doc.
-6. **Draft the milestones.** Order them by dependency. State the dependency graph in one line at the top of the milestones section. Within a milestone, every line must be a checkable thing - no narrative prose between checkboxes (a single one-line purpose under the heading is fine).
-7. **Write the PRD** to a sensible project path. See "Where to save" below.
-8. **Update the project's docs index** if one exists. Look for `docs/index.md` (or a similar catalogue file) and add a wiki-link entry under the appropriate section.
-9. **End-of-turn summary:** one or two sentences naming the file path and the milestone count. No more.
+5. **Ask explicitly for context the implementer will want at hand.** A separate beat from the decision questions - the answer is *material*, not a choice. Prompt: *"Are there any links, files, transcripts, design refs, prior PRs, or example outputs you want me to pin into a 'Context & references' section for the implementer to open during the build? Drop them in now."* Capture each as a bullet under "Context & references" with a one-line note on why it's relevant. If the user has nothing, delete the section in the final draft.
+6. **Convert each answered question into a row in the Decisions captured table.** This is the contract: every decision the user made is visible at the top of the doc.
+7. **Draft the milestones.** Order them by dependency. State the dependency graph in one line at the top of the milestones section. Within a milestone, every line must be a checkable thing - no narrative prose between checkboxes (a single one-line purpose under the heading is fine).
+8. **Write the PRD** to a sensible project path. See "Where to save" below.
+9. **Update the project's docs index** if one exists. Look for `docs/index.md` (or a similar catalogue file) and add a wiki-link entry under the appropriate section.
+10. **End-of-turn summary:** one or two sentences naming the file path and the milestone count. No more.
 
 ## Where to save
 
@@ -137,6 +146,7 @@ Filename convention: `kebab-case-prd.md`. Lowercase. The `-prd.md` suffix is loa
 - **Milestones over PRs.** Default to milestones (M1, M2, ...). Only switch to PR-numbered sections (PR 1, PR 2a, ...) when the work clearly spans multiple deployable shipments and the user has confirmed that intent.
 - **The verification milestone is mandatory.** Even small PRDs end with an M<N> that is the merge gate. Pulls together whatever this project's standard pre-merge check is plus feature-specific manual smoke.
 - **Out-of-scope must say where the deferred thing is tracked** ("self-paced upsell - separate PRD, TBC") so the doc doesn't quietly drop work.
+- **Context & references is for the implementer, not the reviewer.** Every bullet should be something the agent or developer will actually open during the build (design ref, prior PRD, transcript, example output, screenshot, data file). If a link is only there to justify the scope, it belongs in the Problem section, not here. If the user provides no context, delete the section rather than leaving an empty placeholder.
 
 ## Things to avoid
 
