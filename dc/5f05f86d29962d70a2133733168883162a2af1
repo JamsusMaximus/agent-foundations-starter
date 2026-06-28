@@ -1,0 +1,22 @@
+prompts/coaching-style-interview.md
+  s_48e00da340f729::t_622da222beb670 156,158
+  s_48e00da340f729::t_47090e121cbb9d 165
+  s_48e00da340f729::t_5917b85998fb97 175-176
+  s_48e00da340f729::t_e9ae9c7597216f 171
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "dc5f05f86d29962d70a2133733168883162a2af1",
+  "prompts": {},
+  "sessions": {
+    "s_48e00da340f729": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6275b435-72fc-4c82-af2d-06ee4e90f07c",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "James McAulay <hello@jamesmcaulay.co.uk>"
+    }
+  }
+}
