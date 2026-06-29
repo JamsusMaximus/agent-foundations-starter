@@ -1,0 +1,19 @@
+skills/prd/SKILL.md
+  s_0bbda259ef7d86::t_7c3c59ce99ee9c 5,20,61-74,138-143,148-150,152-176,179-185,196,198,202,207,218
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "6d57a0d962992978a485a34e3aacc9178189fd9c",
+  "prompts": {},
+  "sessions": {
+    "s_0bbda259ef7d86": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a259ccce-67df-4ca9-8e59-7e6e4162a059",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "James McAulay <hello@jamesmcaulay.co.uk>"
+    }
+  }
+}
