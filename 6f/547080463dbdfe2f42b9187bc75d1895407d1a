@@ -1,0 +1,28 @@
+skills/multi-agent-refine/SKILL.md
+  s_0bbda259ef7d86::t_4b8e901da1fd32 1-87
+skills/README.md
+  s_0bbda259ef7d86::t_8772e0a2c3ed16 34
+  s_0bbda259ef7d86::t_86f8aaf88381b5 14-17
+skills/weekly-retro/SKILL.md
+  s_0bbda259ef7d86::t_4b8e901da1fd32 1-114
+skills/crystallise-memory/SKILL.md
+  s_0bbda259ef7d86::t_c9dab2ac76c1c3 1-120
+skills/set-up-my-second-brain/SKILL.md
+  s_0bbda259ef7d86::t_4b8e901da1fd32 1-111
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "6f547080463dbdfe2f42b9187bc75d1895407d1a",
+  "prompts": {},
+  "sessions": {
+    "s_0bbda259ef7d86": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a259ccce-67df-4ca9-8e59-7e6e4162a059",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "James McAulay <hello@jamesmcaulay.co.uk>"
+    }
+  }
+}
