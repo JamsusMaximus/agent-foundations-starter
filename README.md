@@ -6,34 +6,42 @@ For the full participant tutorial (with screenshots), see the chapter Google Doc
 
 ---
 
-## Get started — paste this into your agent
+## Get started
 
-Open the cloned folder in Cowork or your coding agent. Start a new chat and paste:
+**Quickest path — let the skill drive it.** In **Claude Code** (or **Cowork** with the
+starter's skills installed), start a chat and say **"set up my second brain"** (or run
+`/set-up-my-second-brain`). It checks what's here, runs the interviews one at a time,
+and saves everything for you. Prefer to drive it by hand? Use the prompt below.
+
+**First, get this folder in front of your agent:**
+
+- **Cowork / Claude Code / Cursor (folder tools):** [download the ZIP](https://github.com/JamsusMaximus/agent-foundations-starter/archive/refs/heads/main.zip), unzip it, and open the folder in your tool. (Comfortable with git? `git clone` instead.) Step-by-step screenshots are in the participant tutorial Google Doc James shared.
+- **Plain claude.ai or ChatGPT chat (no folder):** a normal chat can't open a folder and won't remember anything next session. Create a **Project** (Claude) or equivalent, upload these files into it, and work there — that's what makes your context persist.
+
+**Then start a new chat and paste:**
 
 ```
-I've just cloned the agent-foundations-starter into this folder.
+I'm setting up the agent-foundations-starter. The files are in this
+workspace — if you can see a folder, read it; if you can't, I'll paste
+files in as you ask for them.
 
 Please:
 1. Read the README and skim the folder structure so you know what's here.
-2. Read claude.md (root) so you know how I want to be coached.
-3. Check which of these context files are still placeholders vs filled in:
+2. Read the instructions file (CLAUDE.md if you're Claude, AGENTS.md if
+   you're Codex) so you know how I want to be coached.
+3. Check which of these are still missing/placeholder vs filled in:
    - context/role-profile.md
    - context/linkedin.md
    - context/background-research.md
    - goals.md
-   - claude.md (root — this is the system prompt)
+   - the coaching style in CLAUDE.md / AGENTS.md (the most important one)
 
-For each one that's still a placeholder, walk me through filling it in
-using the matching prompt from prompts/. Pick whichever you think will
-take least time to a useful state and start there.
+For each gap, walk me through it using the matching prompt from prompts/,
+ONE at a time. Before each, ask if I already have a doc that covers it
+(CV, LinkedIn PDF, JD, OKRs, a deck) so I don't retype it, and push me
+for specifics if I answer too briefly. Do background research LAST.
 
-If I have any existing docs (role description, OKRs, working-style
-notes, a pitch deck) I can attach now and you can use them to short-cut
-the relevant interview - say "if you have a [type of doc], drop it in
-now and I'll work from that instead of running the full interview."
-
-Don't try to fill them all in one shot - do one, save the output to the
-right file, then ask me before moving on to the next.
+Save each output to the right file, then check with me before the next.
 ```
 
 That's it. Your agent takes you through the rest.
@@ -45,7 +53,7 @@ That's it. Your agent takes you through the rest.
 ```
 .
 ├── README.md                       This file
-├── claude.md                       System prompt (placeholder until you run the Coaching Style Interview)
+├── CLAUDE.md                       System prompt (placeholder until you run the Coaching Style Interview)
 ├── guardrails.md                   Safety rules for any agent in this folder
 ├── goals.md                        Your 2026 goals (living doc)
 ├── editor-recommendations.md       Free markdown editors if you don't have one
@@ -64,21 +72,27 @@ That's it. Your agent takes you through the rest.
 │
 └── skills/                         Reusable agent skills (covered properly in Week 2)
     ├── README.md
-    └── humanise-writing/
-        └── SKILL.md
+    ├── set-up-my-second-brain/     The onboarding flow (this folder's setup)
+    ├── crystallise-memory/
+    ├── humanizer/
+    ├── multi-agent-refine/
+    ├── owasp-security-check/
+    ├── prd/
+    └── weekly-retro/
 ```
 
 ---
 
 ## Running order
 
-If you'd rather drive the process yourself instead of using the prompt above:
+The `set-up-my-second-brain` skill does this for you. To drive it yourself, do your
+own context first and the company research last:
 
-1. **Background Research** — kick off first; it runs for 5-10 minutes in the background. See `prompts/background-research.md`.
-2. **Role Profile Interview** — `prompts/role-profile-interview.md`. Output goes into `context/role-profile.md`.
-3. **LinkedIn export** — `prompts/linkedin-export.md`. Output goes into `context/linkedin.md`.
-4. **Goals** — fill in `goals.md` directly (or attach your existing OKRs / planning doc and let the agent reference it).
-5. **Coaching Style Interview** — `prompts/coaching-style-interview.md`. Output replaces `claude.md` at the root.
+1. **Role Profile Interview** — `prompts/role-profile-interview.md`. Output → `context/role-profile.md`.
+2. **LinkedIn export** — `prompts/linkedin-export.md`. Output → `context/linkedin.md`.
+3. **Goals** — fill in `goals.md` directly (or attach your existing OKRs / planning doc).
+4. **Coaching Style Interview** — `prompts/coaching-style-interview.md`. Output replaces `CLAUDE.md` at the root (or write `AGENTS.md` if you're on Codex).
+5. **Background Research** — `prompts/background-research.md`. Do this **last**, then reconcile it against what you wrote above — your own context wins on any conflict.
 
 ---
 
@@ -125,6 +139,8 @@ git pull origin main
 ```
 
 If you've edited any of the placeholder files, your edits stay; only files we change at source (templates, README, prompts) will update.
+
+**Your answers are personal.** `CLAUDE.md`, `goals.md` and the `context/` files hold your own details. A `.gitignore` keeps new personal files out of git, but the shipped placeholders are already tracked — so if you don't want your answers under version control (or you hit conflicts on `git pull`), either **fork** this repo, or run once: `git rm --cached CLAUDE.md goals.md context/*.md`.
 
 ---
 

@@ -1,0 +1,20 @@
+# Your personal second-brain answers. These are yours, not ours.
+#
+# Note: the shipped placeholder versions of goals.md / context/*.md are already
+# tracked, so listing them here only stops NEW personal files from being committed.
+# To keep your filled-in answers fully out of git, either fork this repo, or run once:
+#   git rm --cached goals.md context/role-profile.md context/linkedin.md context/background-research.md
+#
+goals.md
+context/role-profile.md
+context/linkedin.md
+context/background-research.md
+
+# Personal docs you might drop in to short-cut the interviews
+*.pdf
+*.docx
+attachments/
+
+# Scratch / tooling
+.firecrawl/
+.DS_Store
