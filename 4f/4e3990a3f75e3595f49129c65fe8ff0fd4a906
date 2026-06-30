@@ -1,0 +1,37 @@
+skills/set-up-my-second-brain/SKILL.md
+  s_1d4c32e95777f8::t_2cd8ef809e8c54 91-95,99-100
+  s_1d4c32e95777f8::t_fdfb4edc142f28 208-209,212-222
+  s_1d4c32e95777f8::t_d21afa66054518 148-165
+  s_1d4c32e95777f8::t_48d206f8c18f0b 23-32,34
+  s_1d4c32e95777f8::t_291578e567bad4 112-134
+  s_1d4c32e95777f8::t_7d395f7ce0082a 62-80
+  s_1d4c32e95777f8::t_37334e909ef573 106-108
+  s_1d4c32e95777f8::t_2318c04e62c85d 175-188
+  s_1d4c32e95777f8::t_9be1aecc74908a 228-234
+README.md
+  s_1d4c32e95777f8::t_1f61038bdd67f3 75-81
+  s_1d4c32e95777f8::t_c44d615e7b17a0 143-144
+  s_1d4c32e95777f8::t_35742656db3eb7 9,11-21,24-26,30-32,37,39-42,44
+  s_1d4c32e95777f8::t_921e2b1b61c624 56
+  s_1d4c32e95777f8::t_ce4d3b0dba7f89 88-89,91-95
+CLAUDE.md
+  s_1d4c32e95777f8::t_f619d60dd723d0 3-29
+.gitignore
+  s_1d4c32e95777f8::t_b82f7748c87ea1 1-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.5",
+  "base_commit_sha": "4f4e3990a3f75e3595f49129c65fe8ff0fd4a906",
+  "prompts": {},
+  "sessions": {
+    "s_1d4c32e95777f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6abdde31-2058-4093-b081-0d53c0245dd5",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "James McAulay <hello@jamesmcaulay.co.uk>"
+    }
+  }
+}
