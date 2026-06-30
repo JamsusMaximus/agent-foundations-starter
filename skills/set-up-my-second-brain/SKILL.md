@@ -74,8 +74,9 @@ If a memory-extraction was run first, its `context/` files are what you detect h
 
 ## Step 1 - Pull the proven setup from the repo
 
-Fetch and read, for the gaps only: `README.md` (running order) plus the matching
-prompts - all under `prompts/`: `prompts/role-profile-interview.md`,
+Fetch and read, for the gaps only: `README.md` (folder structure + the "first real
+chat" prompts) plus the matching prompts - all under `prompts/`:
+`prompts/role-profile-interview.md`,
 `prompts/linkedin-export.md`, `prompts/background-research.md`,
 `prompts/goals-template.md`, `prompts/coaching-style-interview.md`.
 
@@ -84,16 +85,41 @@ don't invent the repo's questions from memory.
 
 ## Step 2 - Run the interviews thoroughly, filling gaps
 
-For each gap, in the repo's running order, **follow that prompt exactly** - most are
-one-question-at-a-time interviews; respect that (no dumping all questions, no
+Work through the gaps one piece at a time and **follow each prompt exactly** - most
+are one-question-at-a-time interviews; respect that (no dumping all questions, no
 summarising between answers). This thoroughness is what makes the context solid.
 Fill missing sections **within** a partial file too; say what you're skipping.
 
-- **Offer the shortcut up front:** before the career and company sections, ask if
-  they have a doc to attach (LinkedIn PDF, JD, deck) rather than interviewing cold.
+**Order (this deliberately overrides the repo README's running order):** start with
+the **role-profile interview**, then LinkedIn / career, then goals, then the
+coaching-style interview. Do **background research LAST, never first** - the user's
+own context comes first, and the research is reconciled against it once it's built.
+
+- **Offer the shortcut up front:** before the career section, ask if they have a doc
+  to attach (LinkedIn PDF, JD) rather than interviewing cold.
 - **Privacy (state up front):** flag and leave out by default anything personal or
   sensitive - health, relationships, money, emotion, sensitive professional
   transitions, and any third-party/safeguarding data. Ask before recording.
+
+### Background research - the last piece, and the one exception to "follow the prompt exactly"
+
+`prompts/background-research.md` is written for a *separate* research tool, so don't
+relay it verbatim. Handle it last, and let the user choose how it runs:
+
+- **Recommended - run it properly:** point them to a real Research / Deep Research
+  mode (Claude or ChatGPT; Perplexity if they're on a free plan) and have them paste
+  the repo prompt with `[COMPANY]` / `[DOMAIN]` filled in, plus any internal docs
+  (deck, strategy, QBR). It runs ~5-10 min and returns a far richer profile than a
+  quick search. They bring the output back and you save it.
+- **Offer the quick alternative:** if they'd rather not, offer to run a simpler
+  search inline yourself with your own web tools, using the prompt's sources,
+  accuracy rules, and structure. Say plainly it's lighter than a full research run.
+- **On the way back, reconcile - don't just file it.** Cross-check the research
+  against what's already in `context/` (role profile, LinkedIn, goals). **Always
+  defer to context the user gave you:** where the research disagrees with the user's
+  own statements or docs, the user wins - flag the discrepancy, keep their version,
+  and record the research as "public sources say X" rather than overwriting. Delete
+  or correct anything obviously wrong before saving.
 
 ## Step 3 - Propose, reconcile, save
 
