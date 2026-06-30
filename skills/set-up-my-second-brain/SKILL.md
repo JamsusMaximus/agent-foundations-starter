@@ -87,11 +87,11 @@ Filenames lie - a file can be empty, a placeholder, or stale. Judge by content.
    - One of them already exists -> that's your target.
    - Both exist -> ask which tool they mainly use, and don't duplicate coaching style
      across both (pick one canonical file, point the other at it if needed).
-   - Only the starter's `claude.md` is here but you're running as Codex (or they say
+   - Only the starter's `CLAUDE.md` is here but you're running as Codex (or they say
      they'll mainly use an AGENTS.md tool) -> target `AGENTS.md` so it actually gets
-     loaded. Don't copy the `claude.md` placeholder across - it's just a to-do stub
+     loaded. Don't copy the `CLAUDE.md` placeholder across - it's just a to-do stub
      ("run the coaching interview, then replace this"). Write the *rendered* coaching
-     style into `AGENTS.md`, and leave a one-line pointer in `claude.md` ("coaching
+     style into `AGENTS.md`, and leave a one-line pointer in `CLAUDE.md` ("coaching
      style now lives in AGENTS.md") so the orphan doesn't mislead the next session.
    - Neither / genuinely unsure -> just ask "Claude or Codex (or another tool)?" once.
    You usually know this already - you're the host agent running the skill - so infer
@@ -208,18 +208,23 @@ any web research. Then pick the route by what your surface can do:
   - coaching style -> the instructions file from Step 0 (`CLAUDE.md` for Claude,
     `AGENTS.md` for Codex and others), at root
 - **Coaching style goes in the instructions file**, not a separate
-  `context/coaching-style.md`. The starter ships `claude.md` as a placeholder system
-  prompt, so for Claude you replace it - saving as **uppercase `CLAUDE.md`** (the
+  `context/coaching-style.md`. The starter ships `CLAUDE.md` as a placeholder system
+  prompt, so for Claude you replace it - keeping it as **uppercase `CLAUDE.md`** (the
   standard; also loads on case-sensitive Linux/CI, where lowercase `claude.md` would
   be silently ignored). For Codex (or another AGENTS.md-based tool) write `AGENTS.md`
   so the host actually loads it. One canonical copy only - don't duplicate it across
   both files or into `context/`. (Mac note: `claude.md` and `CLAUDE.md` are the same
   file on macOS, so renaming in place is safe; never end up with both.)
-- **Wire the rest in so it actually loads.** Many hosts auto-load only the instructions
-  file (Claude Code loads `CLAUDE.md` and its `@`-imports; nothing else). So in that
-  file add an `@guardrails.md` import (the starter's safety rules, otherwise orphaned)
-  and a one-line pointer to read `context/` each session - otherwise the guardrails
-  and all the context you just built sit unread on disk.
+- **Wire the rest in so it actually loads - using the mechanism the host understands.**
+  The instructions file must pull in the safety rules and point at `context/`, or they
+  sit unread on disk. Match the host:
+  - **Claude (`CLAUDE.md`):** add an `@guardrails.md` import (Claude Code expands
+    `@`-imports) plus a one-line pointer to read `context/` each session.
+  - **Codex / other `AGENTS.md` tools:** `@`-imports do NOT work here. Don't write a
+    literal `@guardrails.md` - it won't expand and the safety floor is silently lost.
+    Instead paste the guardrails text inline under a "Safety rules" heading, or add an
+    explicit line: "Read `guardrails.md` and the files in `context/` at the start of
+    every session."
 - **A pre-existing user-authored instructions file is theirs - never overwrite it.**
   If `CLAUDE.md` / `AGENTS.md` already holds real content (not the starter
   placeholder), don't clobber it: merge the coaching style into a clear "How to coach

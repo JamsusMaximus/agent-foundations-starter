@@ -8,40 +8,50 @@ For the full participant tutorial (with screenshots), see the chapter Google Doc
 
 ## Get started
 
-**Quickest path — let the skill drive it.** In **Claude Code** (or **Cowork** with the
-starter's skills installed), start a chat and say **"set up my second brain"** (or run
-`/set-up-my-second-brain`). It checks what's here, runs the interviews one at a time,
-and saves everything for you. Prefer to drive it by hand? Use the prompt below.
+**Quickest path — let the skill drive it.** In **Claude Code** (and any tool where the
+starter's skills are installed), start a chat and say **"set up my second brain"** (or
+run `/set-up-my-second-brain`). It checks what's here, runs the interviews one at a
+time, and saves everything for you. **Not sure it's installed, or nothing happens? Use
+the paste prompt below — it works everywhere.**
 
 **First, get this folder in front of your agent:**
 
 - **Cowork / Claude Code / Cursor (folder tools):** [download the ZIP](https://github.com/JamsusMaximus/agent-foundations-starter/archive/refs/heads/main.zip), unzip it, and open the folder in your tool. (Comfortable with git? `git clone` instead.) Step-by-step screenshots are in the participant tutorial Google Doc James shared.
 - **Plain claude.ai or ChatGPT chat (no folder):** a normal chat can't open a folder and won't remember anything next session. Create a **Project** (Claude) or equivalent, upload these files into it, and work there — that's what makes your context persist.
 
+The whole thing takes about an hour — five short interviews, roughly 10 minutes each, and you can stop and pick it back up later.
+
 **Then start a new chat and paste:**
 
 ```
-I'm setting up the agent-foundations-starter. The files are in this
-workspace — if you can see a folder, read it; if you can't, I'll paste
-files in as you ask for them.
+I'm setting up the agent-foundations-starter — a guided onboarding so you
+understand me and can coach me well. The files may be in this workspace:
+if you can see a folder, read it; if you can't, fetch what you need from
+github.com/JamsusMaximus/agent-foundations-starter or ask me to paste it.
 
-Please:
-1. Read the README and skim the folder structure so you know what's here.
-2. Read the instructions file (CLAUDE.md if you're Claude, AGENTS.md if
-   you're Codex) so you know how I want to be coached.
-3. Check which of these are still missing/placeholder vs filled in:
-   - context/role-profile.md
-   - context/linkedin.md
-   - context/background-research.md
-   - goals.md
+Before anything else, tell me plainly whether you can SAVE files here.
+- If you can't (e.g. a plain chat with no folder): say so now, give me
+  each result as text with exactly where to put it, and never tell me a
+  file is saved when it isn't. If I'm in a plain chat, suggest I move to a
+  Project first so this actually persists to next time.
+
+Then:
+1. Read the README + the instructions file (CLAUDE.md for Claude, AGENTS.md
+   for Codex; if neither has real content yet, that's expected).
+2. Check which of these are still missing/placeholder vs filled in:
+   - context/role-profile.md, context/linkedin.md,
+     context/background-research.md, goals.md
    - the coaching style in CLAUDE.md / AGENTS.md (the most important one)
+3. For each gap, walk me through it ONE at a time using the matching prompt
+   from prompts/ (they live at
+   github.com/JamsusMaximus/agent-foundations-starter/tree/main/prompts —
+   read locally if you can, otherwise fetch them or ask me to paste one in).
+   Before each, ask if I already have a doc that covers it (CV, LinkedIn
+   PDF, JD, OKRs, a deck) so I don't retype it; push me for specifics if I
+   answer too briefly. Do background research LAST.
 
-For each gap, walk me through it using the matching prompt from prompts/,
-ONE at a time. Before each, ask if I already have a doc that covers it
-(CV, LinkedIn PDF, JD, OKRs, a deck) so I don't retype it, and push me
-for specifics if I answer too briefly. Do background research LAST.
-
-Save each output to the right file, then check with me before the next.
+Save each output to the right file (or hand me the text + where it goes if
+you can't save), then check with me before moving to the next.
 ```
 
 That's it. Your agent takes you through the rest.
@@ -54,6 +64,7 @@ That's it. Your agent takes you through the rest.
 .
 ├── README.md                       This file
 ├── CLAUDE.md                       System prompt (placeholder until you run the Coaching Style Interview)
+│                                   On Codex/other AGENTS.md tools, an AGENTS.md is created to hold this instead
 ├── guardrails.md                   Safety rules for any agent in this folder
 ├── goals.md                        Your 2026 goals (living doc)
 ├── editor-recommendations.md       Free markdown editors if you don't have one
