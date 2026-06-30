@@ -1,0 +1,24 @@
+skills/set-up-my-second-brain/SKILL.md
+  s_1d4c32e95777f8::t_c8bcce1fcfa1cf 218-227
+  s_1d4c32e95777f8::t_128e29e2e83146 90,92,94
+  s_1d4c32e95777f8::t_2d997cf9da9ea2 211-212
+README.md
+  s_1d4c32e95777f8::t_45e0e6ab6bbce9 67
+  s_1d4c32e95777f8::t_7df3794655762f 11-15,22-23,27-43,45-54
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.5",
+  "base_commit_sha": "0acb4338319eec0cd439a4da9fbcdf31cfa1e8d5",
+  "prompts": {},
+  "sessions": {
+    "s_1d4c32e95777f8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6abdde31-2058-4093-b081-0d53c0245dd5",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "James McAulay <hello@jamesmcaulay.co.uk>"
+    }
+  }
+}
