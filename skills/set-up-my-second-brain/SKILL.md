@@ -60,7 +60,10 @@ Filenames lie - a file can be empty, a placeholder, or stale. Judge by content.
    confirm it's still current, probing high-churn things (role, company, goals).
    Skip the currency question on an empty folder.
 5. **Surface check - do this FIRST, before any interview.** Work out what this
-   surface can do, and say so plainly before investing the user's time:
+   surface can do, and say so plainly before investing the user's time. If you can't
+   tell (e.g. claude.ai can't tell a plain chat from a Project), just ask which tool
+   they're in - Cowork / Claude Code / Cursor / Codex are fine to proceed; a plain
+   Claude or ChatGPT chat should move to a Project first (see below):
    - **No filesystem at all** (plain claude.ai / ChatGPT chat with no folder): you
      can't read or write files, and nothing here persists to the next chat. Say this
      up front. Recommend they move to a **Claude Project** (or ChatGPT "Project" /

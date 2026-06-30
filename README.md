@@ -29,11 +29,14 @@ understand me and can coach me well. The files may be in this workspace:
 if you can see a folder, read it; if you can't, fetch what you need from
 github.com/JamsusMaximus/agent-foundations-starter or ask me to paste it.
 
-Before anything else, tell me plainly whether you can SAVE files here.
-- If you can't (e.g. a plain chat with no folder): say so now, give me
-  each result as text with exactly where to put it, and never tell me a
-  file is saved when it isn't. If I'm in a plain chat, suggest I move to a
-  Project first so this actually persists to next time.
+Before anything else, ask me which tool I'm using, and act on it:
+- Cowork, Claude Code, Cursor or Codex (a folder/agent tool): great — you
+  can save files, carry on.
+- A plain Claude or ChatGPT chat (no project): stop and tell me to set up a
+  Project (Claude) or equivalent and upload these files there first —
+  otherwise nothing persists to next time. If I choose to stay in plain
+  chat anyway, give me each result as text with exactly where to put it,
+  and never tell me a file is saved when it isn't.
 
 Then:
 1. Read the README + the instructions file (CLAUDE.md for Claude, AGENTS.md
