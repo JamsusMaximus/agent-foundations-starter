@@ -56,15 +56,28 @@ Filenames lie - a file can be empty, a placeholder, or stale. Judge by content.
    offer to target a dedicated personal folder instead.
 7. **Respect their setup** - if they have a working structure they don't want
    restructured, fill genuine gaps / fix conflicts only, with consent.
+8. **Identify the instructions file** - the file the host agent auto-loads each
+   session, which is where coaching style lands. Convention differs by tool:
+   `CLAUDE.md` / `claude.md` for Claude, `AGENTS.md` for Codex and most other agents.
+   Scan the folder and decide:
+   - One of them already exists -> that's your target.
+   - Both exist -> ask which tool they mainly use, and don't duplicate coaching style
+     across both (pick one canonical file, point the other at it if needed).
+   - Only the starter's `claude.md` is here but you're running as Codex (or they say
+     they'll mainly use an AGENTS.md tool) -> use `AGENTS.md` instead, so it actually
+     gets loaded; migrate the placeholder content over rather than leaving an orphan.
+   - Neither / genuinely unsure -> just ask "Claude or Codex (or another tool)?" once.
+   You usually know this already - you're the host agent running the skill - so infer
+   first and only ask when it's truly ambiguous.
 
 If a memory-extraction was run first, its `context/` files are what you detect here.
 
 ## Step 1 - Pull the proven setup from the repo
 
-Fetch and read, for the gaps only:
-`README.md` (running order) and `prompts/role-profile-interview.md`,
-`linkedin-export.md`, `background-research.md`, `goals-template.md`,
-`coaching-style-interview.md`.
+Fetch and read, for the gaps only: `README.md` (running order) plus the matching
+prompts - all under `prompts/`: `prompts/role-profile-interview.md`,
+`prompts/linkedin-export.md`, `prompts/background-research.md`,
+`prompts/goals-template.md`, `prompts/coaching-style-interview.md`.
 
 If the fetch fails, say so plainly and offer to retry. Don't silently halt and
 don't invent the repo's questions from memory.
@@ -89,11 +102,25 @@ Fill missing sections **within** a partial file too; say what you're skipping.
 - **Never overwrite real user-written content** without approval. You MAY fill
   placeholders. On a conflict, show it, ask which is right, then update - noting the
   change. **One canonical file per piece; no duplicates.**
-- **`CLAUDE.md` is theirs - never overwrite it.** At most append ONE pointer line
-  ("read `context/` each session; it's the source of truth"), with consent - and not
-  if `CLAUDE.md` is a code-project file. **Save the coaching-style output to
-  `context/coaching-style.md`, never a lowercase `claude.md`** (on a Mac that collides
-  with `CLAUDE.md`); add a one-line pointer to it from CLAUDE.md's "How to coach me".
+- **Canonical output files** (match the repo layout exactly - don't invent variants):
+  - role profile -> `context/role-profile.md`
+  - LinkedIn / career -> `context/linkedin.md`
+  - company background -> `context/background-research.md`
+  - goals -> `goals.md` (repo root)
+  - coaching style -> the instructions file you identified in Step 0
+    (`claude.md` / `CLAUDE.md` for Claude, `AGENTS.md` for Codex and others), at root
+- **Coaching style goes in the instructions file**, not a separate
+  `context/coaching-style.md`. The starter ships `claude.md` as a placeholder system
+  prompt, so for Claude you replace that placeholder; for Codex (or another
+  AGENTS.md-based tool) you write `AGENTS.md` instead so the host actually loads it.
+  Either way, one canonical copy - don't duplicate it across both files or into
+  `context/`. (Mac note: `claude.md` and `CLAUDE.md` are the same file on macOS, so
+  never create both.)
+- **A pre-existing user-authored instructions file is theirs - never overwrite it.**
+  If `CLAUDE.md` / `AGENTS.md` already holds real content (not the starter
+  placeholder), don't clobber it: merge the coaching style into a clear "How to coach
+  me" section with consent, and skip it entirely if it's a code-project file - at most
+  append ONE pointer line ("read `context/` each session; it's the source of truth").
 - **No-write surface:** output the final content labelled with where each piece
   goes, for them to paste. Don't claim to have saved.
 
