@@ -1,0 +1,33 @@
+skills/weekly-retro/SKILL.md
+  s_ab4769cf1db6f4::t_a126735515ac6f 171-190
+  s_ab4769cf1db6f4::t_ccd446763a098e 148-151
+  s_ab4769cf1db6f4::t_827a8a1b12a89e 204-214
+  s_ab4769cf1db6f4::t_c6c6ce659094c8 232-234
+  s_ab4769cf1db6f4::t_babcee2bcfb95c 223-231,235-238
+  s_ab4769cf1db6f4::t_36af548ed4cda8 56-59
+  s_ab4769cf1db6f4::t_09767ee2c20298 92-97
+  s_ab4769cf1db6f4::t_97395acbcb577d 216-222
+  s_ab4769cf1db6f4::t_0a3439de0804b0 5-11,21-30,34-44,60-67,76,88-91,98-102,126
+  s_ab4769cf1db6f4::t_87205af99973b1 31-33,45-55,77-87,103-104
+  s_ab4769cf1db6f4::t_ee4e7dee6b472e 68-75
+  s_ab4769cf1db6f4::t_e1e4c976a5b55f 106-122,127-128,132-144
+  s_ab4769cf1db6f4::t_c2c38a3bbf64c5 152
+  s_ab4769cf1db6f4::t_eff0045f3295f7 105
+  s_ab4769cf1db6f4::t_83759d021f634b 215
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "c54fddc8afd851ba456e448d54954a78f396b510",
+  "prompts": {},
+  "sessions": {
+    "s_ab4769cf1db6f4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "23f6f5d1-6e29-491e-895e-92494753594b",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "James McAulay <hello@jamesmcaulay.co.uk>"
+    }
+  }
+}
