@@ -228,11 +228,72 @@ any web research. Then pick the route by what your surface can do:
     Instead paste the guardrails text inline under a "Safety rules" heading, or add an
     explicit line: "Read `guardrails.md` and the files in `context/` at the start of
     every session."
+- **Always add these two standing sections to the instructions file, verbatim
+  (heading and all), no matter what else changed this run.** They're what keeps the
+  context current after today instead of going stale the moment the interviews end.
+  Append them if they're missing; never duplicate them if they're already there. This
+  applies whenever you're writing the real `CLAUDE.md` / `AGENTS.md` (including the
+  "pre-existing file" case below) - it does not extend the narrow code-project
+  fallback in that same bullet, which stays a single pointer line.
+
+  ```
+  ## Keep this up to date
+  When I tell you something that will still matter in future sessions (a change of role or priorities, a new project, a person I work with, a preference, a decision), save it to the right file in `context/` or `goals.md`, then tell me in one line what you saved and where. One fact, one file: update the existing line rather than adding a duplicate. Leave out one-off task details, and anything sensitive (health, money, relationships) unless I ask. If something new contradicts a file, show me both versions and ask which is right.
+
+  ## Builds log
+  Quietly keep what-ive-built.md in this folder up to date, without interrupting me. It records what we build and how I use it.
+  - A build is something that works: a skill, a connection, a scheduled agent, an app, or a doc (such as a PRD). Don't log a draft that doesn't do anything yet. Log a scheduled agent once, when we set it up; don't log its individual runs.
+  - For each build, describe what it does, the steps it takes off my plate and any decisions it helps me make. Be specific about the process, but never include names of people, clients, companies or suppliers, or numbers from my work.
+  - Log real uses under the build, one line per day with a count: "- YYYY-MM-DD | <task in general terms> | xN". Tests and failed runs don't count. If it's a new kind of task for that build (not just a new client or project), add "| new use case | by hand: ?" and carry on without asking me.
+  - Never estimate how long anything takes or what it's worth. When we plan a build, the course prompts ask me; write down my answers exactly as I give them.
+  - Money: only amounts I tell you, exactly as I say them, in the one Money section. Never round, annualise or add up.
+  - Use only the sections and line formats at the top of the file.
+  ```
+
+- **Create `what-ive-built.md` in the folder root** (next to `CLAUDE.md` /
+  `AGENTS.md`) so the Builds log section above has somewhere to write. Only if it
+  doesn't already exist - never overwrite one that's there, even if it looks thin;
+  it may already hold real entries. Starting content, so the format sits at the top
+  and there's nothing that could be mistaken for a real entry:
+
+  ```
+  # What I've built
+  <!-- Agent Accelerator builds log, v3. Keep this format.
+  One section per build:
+  ## build-name
+  - type: skill | connection | scheduled agent | app | doc
+  - built: YYYY-MM-DD (Chapter N)
+  - does: what it does, the steps it takes off my plate
+  - helps decide: decisions it helps me make (optional)
+  - by hand: N minutes, N times a week|month | n/a | unknown
+  - money: none, or see Money
+  - status: active | drafted | retired
+
+  ### Uses
+  - YYYY-MM-DD | task in general terms | xN
+  - YYYY-MM-DD | task in general terms | xN | new use case | by hand: ?
+
+  Money lines (only amounts I give, never rounded, annualised or totalled):
+  - cancelled|saved-estimate|gained: description | £N | one-off|month | credit: all|most|some|a little | YYYY-MM-DD
+  -->
+
+  (none logged)
+
+  ## Money
+  (none logged)
+  ```
+
+  **No-write surface:** you can't create the file, so instead include this starting
+  content in what you hand back, labelled exactly like the rest ("This is your
+  builds log. Make a file called `what-ive-built.md` next to your instructions file
+  and paste this in.").
 - **A pre-existing user-authored instructions file is theirs - never overwrite it.**
   If `CLAUDE.md` / `AGENTS.md` already holds real content (not the starter
   placeholder), don't clobber it: merge the coaching style into a clear "How to coach
   me" section with consent, and skip it entirely if it's a code-project file - at most
   append ONE pointer line ("read `context/` each session; it's the source of truth").
+  The two standing sections above still get appended in the normal (non-code-project)
+  case, same as any other run.
 - **No-write surface:** output the final content for them to save, and make it
   followable by a non-technical user - don't just say "save as `context/role-profile.md`".
   For each piece, say in one plain sentence what it is and exactly how to save it in
@@ -253,3 +314,5 @@ your first read. (The repo's README has ready "first real chat" prompts for this
 
 End by listing what's now covered, any remaining gaps, and a `NEEDS-VERIFYING` list.
 The folder is portable - it moves into Cowork, a coding agent, or any future tool.
+Also tell them, once, in one line: "Your agent will keep track of what you've built,
+so you can estimate time savings and see all your progress at the end."
