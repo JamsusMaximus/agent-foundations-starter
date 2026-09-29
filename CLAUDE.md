@@ -31,6 +31,8 @@ them rather than asking me to re-explain who I am.
 ## Keep this up to date
 
 When I tell you something that will still matter in future sessions (a change of role or priorities, a new project, a person I work with, a preference, a decision), save it to the right file in `context/` or `goals.md`, then tell me in one line what you saved and where. One fact, one file: update the existing line rather than adding a duplicate. Leave out one-off task details, and anything sensitive (health, money, relationships) unless I ask. If something new contradicts a file, show me both versions and ask which is right.
+Keep `index.md` in this folder up to date: one line per file saying what it holds, added whenever you create a file.
+When you notice a gap that would have made your answer better, or a file that looks stale or duplicated, say so in one line at the end of your reply and offer to fix it. Never restructure anything without asking.
 
 ## Builds log
 
