@@ -1,11 +1,12 @@
 # Your personal second-brain answers. These are yours, not ours.
 #
-# Note: the shipped placeholder versions of goals.md / context/*.md are already
+# Note: the shipped placeholder versions of context/*.md are already
 # tracked, so listing them here only stops NEW personal files from being committed.
 # To keep your filled-in answers fully out of git, either fork this repo, or run once:
-#   git rm --cached goals.md context/role-profile.md context/linkedin.md context/background-research.md
+#   git rm --cached context/goals.md context/role-profile.md context/linkedin.md context/background-research.md
 #
 goals.md
+context/goals.md
 context/role-profile.md
 context/linkedin.md
 context/background-research.md
@@ -14,6 +15,8 @@ context/background-research.md
 *.pdf
 *.docx
 attachments/
+sources/
+projects/
 
 # Scratch / tooling
 .firecrawl/

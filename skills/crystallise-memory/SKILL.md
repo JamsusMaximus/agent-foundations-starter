@@ -74,11 +74,13 @@ Once you have been through every category, show:
    ```
    context/
      about-me.md      identity, basics
-     role.md          role, company, what they do
+     role-profile.md  role, company, what they do
      goals.md         their goal + the one metric that matters
      people.md        who they work with
      preferences.md   how they like things done / their voice
    ```
+   Anything about a piece of work with a finish line goes in its own
+   `projects/<name>/README.md` instead, one folder per project.
    Show what goes in each.
 2. **One** pointer line to add to their main instructions file (`CLAUDE.md`,
    uppercase, or the Cowork project instructions) so it reads `context/` every

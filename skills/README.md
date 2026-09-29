@@ -24,8 +24,8 @@ Skills are different from the system prompt (`claude.md`) which loads on every c
 
 ## Container notes
 
-- **Cowork:** Skills supported. Cowork scans `./skills/` in your project folder automatically. Drop the folder in and they're picked up.
-- **Coding Agent (Claude Code, Cursor, etc.):** Skills supported. Claude Code reads `./skills/` (project-local) and `~/.claude/skills/` (global) automatically.
+- **Cowork:** Skills supported, but not from this folder. Cowork loads the skills enabled on your claude.ai account: add one under **Customize** in the Claude desktop app.
+- **Coding Agent (Claude Code, Codex, etc.):** Skills supported. Claude Code loads `.claude/skills/<name>/` in your project folder and `~/.claude/skills/<name>/` (all projects). Codex loads `.agents/skills/<name>/` in your project folder and `~/.agents/skills/<name>/`. A plain `skills/` folder like this one isn't loaded: copy the skill into one of those.
 - **Claude.ai web Projects:** Skills are supported but *not* via this folder. To use a skill in a web Project you have to upload it separately through your Claude.ai settings (zip the skill folder, upload, then enable per-project). Just attaching the folder as a file does not work.
 - **ChatGPT Projects / Gemini Gems:** No native skills concept. Closest equivalent is attaching individual files - which means losing the conditional "load only when relevant" behaviour.
 

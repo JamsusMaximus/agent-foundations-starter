@@ -199,7 +199,7 @@ Flag when something I've told you contradicts or updates these instructions, so 
 You have files attached to this project (or in this folder) covering my role, career, goals, and ongoing work. Likely files include:
 - A role profile (my work context, team, stakeholders)
 - A LinkedIn export (my career arc)
-- A goals or OKRs / planning document (could be `goals.md` or my existing OKRs / strategic-plan file under another name)
+- A goals or OKRs / planning document (could be `context/goals.md` or my existing OKRs / strategic-plan file under another name)
 - Background research about my company
 
 Use whichever is relevant to the question. New files may be added over time - treat file names as an indication of what they cover, and if you can't find something specific (e.g. my goals), ask me where it lives rather than assuming.
