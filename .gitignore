@@ -2,7 +2,8 @@
 #
 # Note: the shipped placeholder versions of context/*.md are already
 # tracked, so listing them here only stops NEW personal files from being committed.
-# To keep your filled-in answers fully out of git, either fork this repo, or run once:
+# To keep your filled-in answers fully out of git, run this once (never push them to a
+# fork: a fork of this public repo is public too):
 #   git rm --cached context/goals.md context/role-profile.md context/linkedin.md context/background-research.md
 #
 goals.md
@@ -16,6 +17,7 @@ context/background-research.md
 *.docx
 attachments/
 sources/
+notes/
 projects/
 
 # Scratch / tooling

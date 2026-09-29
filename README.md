@@ -78,7 +78,8 @@ That's it. Your agent takes you through the rest.
 │   └── background-research.md      Public info about your company (output of Background Research)
 │
 ├── projects/                       One folder per piece of work with a finish line (created when needed)
-├── sources/                        Raw files you drop in: CV, LinkedIn PDF, decks (created when needed)
+├── notes/                          Meeting notes and ideas, one dated file each (created when needed)
+├── sources/                        Original files you drop in: CV, LinkedIn PDF, decks (created when needed)
 │
 ├── prompts/                        Interview prompts and templates — paste these into chats
 │   ├── role-profile-interview.md
@@ -157,7 +158,7 @@ git pull origin main
 
 If you've edited any of the placeholder files, your edits stay; only files we change at source (templates, README, prompts) will update.
 
-**Your answers are personal.** `CLAUDE.md` and the files in `context/`, `projects/` and `sources/` hold your own details. A `.gitignore` keeps new personal files out of git, but the shipped placeholders are already tracked — so if you don't want your answers under version control (or you hit conflicts on `git pull`), either **fork** this repo, or run once: `git rm --cached CLAUDE.md context/*.md`.
+**Your answers are personal.** `CLAUDE.md` and the files in `context/`, `projects/`, `notes/` and `sources/` hold your own details. A `.gitignore` keeps new personal files out of git, but the shipped placeholders are already tracked — so if you don't want your answers under version control (or you hit conflicts on `git pull`), never push them to a fork (a fork of this public repo is public too). Keep them local, or push to a new **private** repo, or run once: `git rm --cached CLAUDE.md context/*.md`.
 
 ---
 
