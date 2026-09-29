@@ -323,3 +323,15 @@ End by listing what's now covered, any remaining gaps, and a `NEEDS-VERIFYING` l
 The folder is portable - it moves into Cowork, a coding agent, or any future tool.
 Also tell them, once, in one line: "Your agent will keep track of what you've built,
 so you can estimate time savings and see all your progress at the end."
+
+**Then close with the completion line.** The very last line of that reply must be
+exactly this, on its own line, as plain text (not in a code block), with nothing
+after it:
+
+Second Brain interview complete ✅
+
+This is how the user knows the setup is finished: their course tells them to wait for
+it. Say it once, only here at the end of Step 4. Never say it after an individual
+interview, and never before the files are saved (or, on a no-write surface, handed
+over for them to save). If they skipped a piece, still close with it, and list the
+skipped piece under the remaining gaps above it.
