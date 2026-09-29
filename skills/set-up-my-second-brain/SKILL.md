@@ -239,6 +239,8 @@ any web research. Then pick the route by what your surface can do:
   ```
   ## Keep this up to date
   When I tell you something that will still matter in future sessions (a change of role or priorities, a new project, a person I work with, a preference, a decision), save it to the right file in `context/` or `goals.md`, then tell me in one line what you saved and where. One fact, one file: update the existing line rather than adding a duplicate. Leave out one-off task details, and anything sensitive (health, money, relationships) unless I ask. If something new contradicts a file, show me both versions and ask which is right.
+  Keep `index.md` in this folder up to date: one line per file saying what it holds, added whenever you create a file.
+  When you notice a gap that would have made your answer better, or a file that looks stale or duplicated, say so in one line at the end of your reply and offer to fix it. Never restructure anything without asking.
 
   ## Builds log
   Quietly keep what-ive-built.md in this folder up to date, without interrupting me. It records what we build and how I use it.
@@ -250,6 +252,11 @@ any web research. Then pick the route by what your surface can do:
   - Use only the sections and line formats at the top of the file.
   ```
 
+- **Create `index.md` in the folder root** (the catalogue the "Keep this up to
+  date" section maintains): one line per file you wrote or found, saying what it
+  holds, e.g. `- context/role-profile.md - my role, team and responsibilities`.
+  If an `index.md` already exists, add the missing lines rather than rewriting it.
+  No-write surface: include it in what you hand back, like the other files.
 - **Create `what-ive-built.md` in the folder root** (next to `CLAUDE.md` /
   `AGENTS.md`) so the Builds log section above has somewhere to write. Only if it
   doesn't already exist - never overwrite one that's there, even if it looks thin;
