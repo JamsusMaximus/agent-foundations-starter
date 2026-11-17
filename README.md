@@ -1,63 +1,20 @@
 # Agent Foundations Starter
 
-Starter folder for building your first AI agent in the [Agent Accelerator](https://jamesmcaulay.co.uk/agent-accelerator). Clone or download, then open it in **Cowork**, **Claude Code**, **Cursor**, or any folder-aware AI tool.
-
-For the full participant tutorial (with screenshots), see the chapter Google Doc James shared. This README is the kick-off prompt for clone-and-go users.
+Prompts and skills for building your first AI agent in the [Agent Accelerator](https://jamesmcaulay.co.uk/agent-accelerator). You don't need to download or clone anything: your agent fetches what it needs from here while it sets you up.
 
 ---
 
 ## Get started
 
-**Quickest path — let the skill drive it.** In **Claude Code** (and any tool where the
-starter's skills are installed), start a chat and say **"set up my second brain"** (or
-run `/set-up-my-second-brain`). It checks what's here, runs the interviews one at a
-time, and saves everything for you. **Not sure it's installed, or nothing happens? Use
-the paste prompt below — it works everywhere.**
+1. **Make a folder called `secondbrain`** on your computer.
+2. **Open it in your AI app:** Claude Code, Codex, Claude or ChatGPT.
+3. **Paste in the Master Interview Prompt**, copied from Chapter 1 of the Agent Accelerator course page.
 
-**First, get this folder in front of your agent:**
+Your agent fetches the [`set-up-my-second-brain`](skills/set-up-my-second-brain/SKILL.md) skill from this repo and runs it: it interviews you one piece at a time and saves everything into your `secondbrain` folder. It opens with three quick questions (where you want to be in five weeks, and a year from now) and saves a first draft of your five-week mission within about ten minutes.
 
-- **Cowork / Claude Code / Cursor (folder tools):** [download the ZIP](https://github.com/JamsusMaximus/agent-foundations-starter/archive/refs/heads/main.zip), unzip it, and open the folder in your tool. (Comfortable with git? `git clone` instead.) Step-by-step screenshots are in the participant tutorial Google Doc James shared.
-- **Plain claude.ai or ChatGPT chat (no folder):** a normal chat can't open a folder and won't remember anything next session. Create a **Project** (Claude) or equivalent, upload these files into it, and work there — that's what makes your context persist.
+The full set-up usually takes 90 minutes to 3 hours, and you can do it over a few sittings: stop when you need to and pick it back up later.
 
-The whole thing takes about an hour — five short interviews, roughly 10 minutes each, and you can stop and pick it back up later.
-
-**Then start a new chat and paste:**
-
-```
-I'm setting up the agent-foundations-starter — a guided onboarding so you
-understand me and can coach me well. The files may be in this workspace:
-if you can see a folder, read it; if you can't, fetch what you need from
-github.com/JamsusMaximus/agent-foundations-starter or ask me to paste it.
-
-Before anything else, ask me which tool I'm using, and act on it:
-- Cowork, Claude Code, Cursor or Codex (a folder/agent tool): great — you
-  can save files, carry on.
-- A plain Claude or ChatGPT chat (no project): stop and tell me to set up a
-  Project (Claude) or equivalent and upload these files there first —
-  otherwise nothing persists to next time. If I choose to stay in plain
-  chat anyway, give me each result as text with exactly where to put it,
-  and never tell me a file is saved when it isn't.
-
-Then:
-1. Read the README + the instructions file (CLAUDE.md for Claude, AGENTS.md
-   for Codex; if neither has real content yet, that's expected).
-2. Check which of these are still missing/placeholder vs filled in:
-   - context/role-profile.md, context/linkedin.md,
-     context/background-research.md, context/goals.md
-   - the coaching style in CLAUDE.md / AGENTS.md (the most important one)
-3. For each gap, walk me through it ONE at a time using the matching prompt
-   from prompts/ (they live at
-   github.com/JamsusMaximus/agent-foundations-starter/tree/main/prompts —
-   read locally if you can, otherwise fetch them or ask me to paste one in).
-   Before each, ask if I already have a doc that covers it (CV, LinkedIn
-   PDF, JD, OKRs, a deck) so I don't retype it; push me for specifics if I
-   answer too briefly. Do background research LAST.
-
-Save each output to the right file (or hand me the text + where it goes if
-you can't save), then check with me before moving to the next.
-```
-
-That's it. Your agent takes you through the rest.
+When it says **"Second Brain interview complete ✅"**, go back to the course page for the next step.
 
 ---
 
@@ -106,11 +63,12 @@ That's it. Your agent takes you through the rest.
 The `set-up-my-second-brain` skill does this for you. To drive it yourself, do your
 own context first and the company research last:
 
-1. **Role Profile Interview** — `prompts/role-profile-interview.md`. Output → `context/role-profile.md`.
-2. **LinkedIn export** — `prompts/linkedin-export.md`. Output → `context/linkedin.md`.
-3. **Goals** — fill in `context/goals.md` directly (or attach your existing OKRs / planning doc).
-4. **Coaching Style Interview** — `prompts/coaching-style-interview.md`. Output replaces `CLAUDE.md` at the root (or write `AGENTS.md` if you're on Codex).
-5. **Background Research** — `prompts/background-research.md`. Do this **last**, then reconcile it against what you wrote above — your own context wins on any conflict.
+0. **Three quick goal questions** - where you want to be in about five weeks and a year from now. Then ask for a short five-week mission (the goal, what's in the way, a first step) and save it at the top of `context/goals.md`.
+1. **Role Profile Interview** - `prompts/role-profile-interview.md`. Output → `context/role-profile.md`.
+2. **Goals** - fill in `context/goals.md` directly (or attach your existing OKRs / planning doc), building on the quick questions.
+3. **LinkedIn export** - `prompts/linkedin-export.md`. Output → `context/linkedin.md`.
+4. **Coaching Style Interview** - `prompts/coaching-style-interview.md`. Output replaces `CLAUDE.md` at the root (or write `AGENTS.md` if you're on Codex).
+5. **Background Research** - `prompts/background-research.md`. Do this **last**, then reconcile it against what you wrote above: your own context wins on any conflict.
 
 ---
 

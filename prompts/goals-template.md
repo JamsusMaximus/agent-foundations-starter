@@ -2,7 +2,7 @@
 
 *Answer each section in a few bullets - capture the essence, not the detail. You'll come back and elaborate later.*
 
-> **For the agent running this:** check today's date first, and frame every section from it. Focus mostly on the next five weeks: that's the goal people know best and care most about right now. From mid-November, five weeks is the run-up to Christmas, so ask about the result that would make this year feel finished, and about the holidays and any leave. Then ask where they want to be a year from now, broadly. Next quarter is optional: many people don't know yet, and one line is fine. Put real dates in the headings you use and in the file you save (for example "By 18 December 2026" and "By November 2027").
+> **For the agent running this:** check today's date first, and frame every section from it. Focus mostly on the next five weeks: that's the goal people know best and care most about right now. From mid-November, five weeks is the run-up to Christmas, so ask about the result that would make this year feel finished, and about the holidays and any leave. Then ask where they want to be a year from now, broadly. Next quarter is optional: many people don't know yet, and one line is fine. Put real dates in the headings you use and in the file you save (for example "By 18 December 2026" and "By November 2027"). If the quick goal questions at the start of the setup already covered a section, don't ask it again: build on the answer.
 
 > **Have OKRs, a plan for this quarter, or a draft plan for next year?** Paste them somewhere in this file (or attach them as a separate file in the same project) and skip the bits that are already covered. Don't reinvent the wheel.
 

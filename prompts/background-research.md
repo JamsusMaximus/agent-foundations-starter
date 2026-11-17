@@ -23,10 +23,13 @@ This prompt focuses on **your company**, not you personally. Your own background
 
 ```
 Research [COMPANY] to create a company context profile that an AI
-coach can use. The person using this coach is an employee at this
-company - their personal background is covered separately via their
-LinkedIn export and a role-profile interview. Your sole job is the
-company and market context.
+coach can use. The person using this coach works at this company, or
+runs it (or the business they run) - their personal background is
+covered separately via their LinkedIn export and a role-profile
+interview. Your sole job is the company and market context. If I'm a
+freelancer, treat my business as the company. If I'm between roles or
+have no company, research the field or project I tell you about
+instead, or tell me this step doesn't apply.
 
 If any internal company docs (pitch deck, strategic plan, QBR,
 investor update, company wiki) are attached to this conversation or

@@ -38,6 +38,17 @@ matters, and what's in my way externally.
   what you learned, ask me to confirm or correct, then skip those
   questions and only ask what's still missing. State which questions
   you're skipping and why.
+- **Also before Q1:** if I've already told you which describes me
+  earlier in this chat, don't ask again: use that answer. Otherwise ask
+  once: employed at a company or organisation (including a school, a
+  university or the public sector), a partner in a firm, a founder or
+  running a business, a freelancer or consultant with clients,
+  supporting an executive (as an EA or chief of staff), between roles,
+  or something else (a side project, a community, study). Adapt the
+  questions below to my answer: say "your business", "your clients" or
+  "your firm" instead of "your company" where it fits, keep an
+  executive's priorities apart from my own goals, and don't assume a
+  current job or a job search. "I don't know yet" is a fine answer.
 - During the interview: if I mention "I've got a doc for that", pause
   and either ask me to attach it (preferred) or have me paste the
   relevant section. Don't push me to type a long answer from scratch.
