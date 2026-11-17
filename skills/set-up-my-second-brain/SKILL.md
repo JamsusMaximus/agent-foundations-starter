@@ -154,12 +154,17 @@ a first useful result after about 30 minutes, not only at the very end.
 2. **Goals.** If the course prompt that sent the user here gave you their
    Accelerator goal (or `projects/agent-accelerator/accelerator-goal.md` exists), use
    it in the goals interview: start from it rather than asking cold, and check how
-   their wider goals relate to it. If they're stuck on a goal, offer the three
+   their wider goals relate to it. Check today's date before the goals interview and
+   frame it from there, as the note at the top of `prompts/goals-template.md` says:
+   this quarter's big goal, then next quarter and the year ahead. If they're stuck on a goal, offer the three
    example goals in `prompts/goals-template.md`, and say they're examples, not
    suggestions to copy. Save `context/goals.md` (per Step 3) before moving on.
    - **Then a short mini-synthesis: "your 90-day mission".** Based only on the role
      profile and goals, give them 3-5 lines: their biggest goal, what's in the way,
-     and a first step they could take this week. Say it's a first draft that gets
+     and a first step they could take this week. Frame it from today's date: the
+     rest of this quarter and getting into position for the next. From mid-November
+     that means landing the year before the holidays and starting Q1 of next year
+     strongly, so name both. Say it's a first draft that gets
      sharper as the rest of the interview fills in. Keep it short, invite one quick
      correction, then move on.
 3. **LinkedIn / career.**
