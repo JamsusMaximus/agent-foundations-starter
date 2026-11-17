@@ -6,9 +6,8 @@ description: >
   coaching style and company background - so the agent deeply understands the user
   and helps them hit their goals. ALWAYS inspects existing context by READING
   CONTENT (not filenames) first, fills only genuine gaps, never overwrites real
-  user content, and gives an early first draft of their 90-day mission straight
-  after the goals so the user gets real insight into their goal and what's in the
-  way. Use when the user says "set up my context / second
+  user content, and opens with three quick goal questions so the user gets a saved
+  first draft of their five-week mission within about ten minutes. Use when the user says "set up my context / second
   brain", "onboard me", "fill in my context files", "check my setup", or opens a
   workspace and wants the agent to learn about them.
 ---
@@ -17,8 +16,8 @@ description: >
 
 Build genuinely solid context about the user by running the proven starter-agent
 interviews thoroughly - that thoroughness is what gets great results. The context
-is the foundation. A short "90-day mission" straight after the goals gives an early
-payoff, and the course's first-real-chat prompts then turn the finished context into
+is the foundation. Three quick goal questions at the start, and a saved "five-week
+mission" straight after them, give an early payoff, and the course's first-real-chat prompts then turn the finished context into
 goal-focus and self-awareness. Don't shortcut the interviews, and don't reinvent them - the repo
 is the proven source of truth.
 
@@ -118,11 +117,13 @@ prompts - all under `prompts/`: `prompts/role-profile-interview.md`,
 **If you have neither local files nor web access** (e.g. plain chat, no folder, no
 fetch): don't halt, and don't invent the questions from memory. Instead, help the
 user fetch them by hand. First explain the overall shape so they know what they're in
-for - five short pieces, done one at a time, roughly 5-15 min each:
+for - three quick goal questions first, then five short pieces, done one at a time,
+roughly 5-15 min each:
 
+0. **Three quick questions** - where you want to be in five weeks and a year from
+   now, then a short first draft of your five-week mission, saved
 1. **Role profile** - who you are and what you do
-2. **Goals** - what you're working toward (straight after this, a short first draft
-   of your 90-day mission)
+2. **Goals** - the full version, building on the quick questions
 3. **LinkedIn / career** - your career arc
 4. **Coaching style** - how you want to be challenged (the important one)
 5. **Background research** - your company and market (done last)
@@ -147,26 +148,30 @@ are one-question-at-a-time interviews; respect that (no dumping all questions, n
 summarising between answers). This thoroughness is what makes the context solid.
 Fill missing sections **within** a partial file too; say what you're skipping.
 
-**Order (the same as the repo README's running order):** this order gives the user
-a first useful result after about 30 minutes, not only at the very end.
+**Order (the same as the repo README's running order):** the quick goal questions
+come first because they're what the user cares about most right now, and they get a
+saved result within about ten minutes instead of only at the very end.
 
+0. **Three quick goal questions, then the five-week mission.** Check today's date
+   first. Ask, one at a time: (a) "Where do you want to be about five weeks from now?"
+   From mid-November that's before Christmas: the result that would make this year
+   feel finished. (b) "What has to be true by then, and what's most in the way?"
+   (c) "Where do you want to be a year from now?" Keep (c) broad: a direction, not a
+   plan. If the course prompt gave you their Accelerator goal (or
+   `projects/agent-accelerator/accelerator-goal.md` exists), start from it rather than
+   asking cold, and check how it relates to their answers. Then give them their
+   **five-week mission** in 3-5 lines: the goal, what's in the way, and a first step
+   for this week, with one line on how it moves them towards where they want to be in
+   a year. Say it's a first draft that gets sharper as the interview goes on, invite
+   one quick correction, and save it straight away at the top of `context/goals.md`
+   under "## Five-week mission (drafted YYYY-MM-DD, review by YYYY-MM-DD)", using
+   today's date and the date five weeks from now. Tell them it's saved.
 1. **Role-profile interview.**
-2. **Goals.** If the course prompt that sent the user here gave you their
-   Accelerator goal (or `projects/agent-accelerator/accelerator-goal.md` exists), use
-   it in the goals interview: start from it rather than asking cold, and check how
-   their wider goals relate to it. Check today's date before the goals interview and
-   frame it from there, as the note at the top of `prompts/goals-template.md` says:
-   this quarter's big goal, then next quarter and the year ahead. If they're stuck on a goal, offer the three
-   example goals in `prompts/goals-template.md`, and say they're examples, not
-   suggestions to copy. Save `context/goals.md` (per Step 3) before moving on.
-   - **Then a short mini-synthesis: "your 90-day mission".** Based only on the role
-     profile and goals, give them 3-5 lines: their biggest goal, what's in the way,
-     and a first step they could take this week. Frame it from today's date: the
-     rest of this quarter and getting into position for the next. From mid-November
-     that means landing the year before the holidays and starting Q1 of next year
-     strongly, so name both. Say it's a first draft that gets
-     sharper as the rest of the interview fills in. Keep it short, invite one quick
-     correction, then move on.
+2. **Goals, the full version** (`prompts/goals-template.md`), building on the quick
+   questions: don't ask again what they've already told you. If they're stuck on a
+   goal, offer the example goals in that file, and say they're examples, not
+   suggestions to copy. Update `context/goals.md` (keep the mission at the top, and
+   update it if the full interview changes it) before moving on.
 3. **LinkedIn / career.**
 4. **Coaching-style interview.**
 5. **Background research LAST, never first** - the user's own context comes first,

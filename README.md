@@ -10,7 +10,7 @@ Prompts and skills for building your first AI agent in the [Agent Accelerator](h
 2. **Open it in your AI app:** Claude Code, Codex, Claude or ChatGPT.
 3. **Paste in the Master Interview Prompt**, copied from Chapter 1 of the Agent Accelerator course page.
 
-Your agent fetches the [`set-up-my-second-brain`](skills/set-up-my-second-brain/SKILL.md) skill from this repo and runs it: it interviews you one piece at a time and saves everything into your `secondbrain` folder. You'll get a first draft of your 90-day mission after about 30 minutes, straight after the goals interview.
+Your agent fetches the [`set-up-my-second-brain`](skills/set-up-my-second-brain/SKILL.md) skill from this repo and runs it: it interviews you one piece at a time and saves everything into your `secondbrain` folder. It opens with three quick questions (where you want to be in five weeks, and a year from now) and saves a first draft of your five-week mission within about ten minutes.
 
 The full set-up usually takes 90 minutes to 3 hours, and you can do it over a few sittings: stop when you need to and pick it back up later.
 
@@ -63,8 +63,9 @@ When it says **"Second Brain interview complete ✅"**, go back to the course pa
 The `set-up-my-second-brain` skill does this for you. To drive it yourself, do your
 own context first and the company research last:
 
+0. **Three quick goal questions** - where you want to be in about five weeks and a year from now. Then ask for a short five-week mission (the goal, what's in the way, a first step) and save it at the top of `context/goals.md`.
 1. **Role Profile Interview** - `prompts/role-profile-interview.md`. Output → `context/role-profile.md`.
-2. **Goals** - fill in `context/goals.md` directly (or attach your existing OKRs / planning doc). Then ask for a short first draft of your 90-day mission: your biggest goal, what's in the way and a first step.
+2. **Goals** - fill in `context/goals.md` directly (or attach your existing OKRs / planning doc), building on the quick questions.
 3. **LinkedIn export** - `prompts/linkedin-export.md`. Output → `context/linkedin.md`.
 4. **Coaching Style Interview** - `prompts/coaching-style-interview.md`. Output replaces `CLAUDE.md` at the root (or write `AGENTS.md` if you're on Codex).
 5. **Background Research** - `prompts/background-research.md`. Do this **last**, then reconcile it against what you wrote above: your own context wins on any conflict.
