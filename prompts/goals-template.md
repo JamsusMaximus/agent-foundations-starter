@@ -4,6 +4,12 @@
 
 > **Have OKRs, a strategic plan, or NY resolutions for 2026?** Paste them somewhere in this file (or attach them as a separate file in the same project) and skip the bits that are already covered. Don't reinvent the wheel.
 
+> **Stuck on a goal?** Here are three example goals, to show the shape of a good one. They're examples, not suggestions to copy: your goal should come from your own work.
+>
+> - **Save time:** "Cut the time I spend on my weekly report from half a day to under an hour within 90 days, so Friday afternoons go on planning instead."
+> - **Ship something:** "Launch the new customer onboarding guide by the end of next quarter, after testing it with five real customers."
+> - **Grow my role:** "Become the person my team comes to for AI within six months: run two short internal sessions and get one new way of working adopted by the whole team."
+
 ---
 
 ## Looking back at Q1

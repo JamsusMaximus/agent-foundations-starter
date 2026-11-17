@@ -2,12 +2,13 @@
 name: set-up-my-second-brain
 description: >
   Build solid, personalised context (a "second brain") by running the proven
-  agent-foundations-starter setup - role profile, career (LinkedIn), company
-  background, goals and coaching style - so the agent deeply understands the user
+  agent-foundations-starter setup - role profile, goals, career (LinkedIn),
+  coaching style and company background - so the agent deeply understands the user
   and helps them hit their goals. ALWAYS inspects existing context by READING
   CONTENT (not filenames) first, fills only genuine gaps, never overwrites real
-  user content, and ends with a synthesis so the user gets real insight into their
-  goal and what's in the way. Use when the user says "set up my context / second
+  user content, and gives an early first draft of their 90-day mission straight
+  after the goals so the user gets real insight into their goal and what's in the
+  way. Use when the user says "set up my context / second
   brain", "onboard me", "fill in my context files", "check my setup", or opens a
   workspace and wants the agent to learn about them.
 ---
@@ -16,8 +17,9 @@ description: >
 
 Build genuinely solid context about the user by running the proven starter-agent
 interviews thoroughly - that thoroughness is what gets great results. The context
-is the foundation; once it's built, a synthesis turns it into goal-focus and
-self-awareness. Don't shortcut the interviews, and don't reinvent them - the repo
+is the foundation. A short "90-day mission" straight after the goals gives an early
+payoff, and the course's first-real-chat prompts then turn the finished context into
+goal-focus and self-awareness. Don't shortcut the interviews, and don't reinvent them - the repo
 is the proven source of truth.
 
 **Not running under Claude Code?** Codex, Cursor, plain claude.ai/ChatGPT chat and
@@ -32,8 +34,8 @@ sandboxes (e.g. Codex) block network by default, and fetching a file that's sitt
 next to you just wastes a call or stalls. Live fallback:
 `https://raw.githubusercontent.com/JamsusMaximus/agent-foundations-starter/main/`
 
-The pieces: role profile · career (LinkedIn) · company background · goals · coaching
-style. The **coaching-style** interview is the important one - it captures the
+The pieces: role profile · goals · career (LinkedIn) · coaching style · company
+background. The **coaching-style** interview is the important one - it captures the
 user's derailing patterns (their "shadows") and how they want to be challenged
 (drill-sergeant / sparring-partner / trigger questions), so the agent ends up
 challenging them toward their goals, not just obeying. Don't let this one get
@@ -110,8 +112,8 @@ If a memory-extraction was run first, its `context/` files are what you detect h
 Read (local first, per the note above; fetch only if missing), for the gaps only:
 `README.md` (folder structure + the "first real chat" prompts) plus the matching
 prompts - all under `prompts/`: `prompts/role-profile-interview.md`,
-`prompts/linkedin-export.md`, `prompts/background-research.md`,
-`prompts/goals-template.md`, `prompts/coaching-style-interview.md`.
+`prompts/goals-template.md`, `prompts/linkedin-export.md`,
+`prompts/coaching-style-interview.md`, `prompts/background-research.md`.
 
 **If you have neither local files nor web access** (e.g. plain chat, no folder, no
 fetch): don't halt, and don't invent the questions from memory. Instead, help the
@@ -119,8 +121,9 @@ user fetch them by hand. First explain the overall shape so they know what they'
 for - five short pieces, done one at a time, roughly 5-15 min each:
 
 1. **Role profile** - who you are and what you do
-2. **LinkedIn / career** - your career arc
-3. **Goals** - what you're working toward
+2. **Goals** - what you're working toward (straight after this, a short first draft
+   of your 90-day mission)
+3. **LinkedIn / career** - your career arc
 4. **Coaching style** - how you want to be challenged (the important one)
 5. **Background research** - your company and market (done last)
 
@@ -129,8 +132,8 @@ Then give them the clickable links and walk them through it: "Open each link, cl
 one at a time. Start with the first:"
 
 - Role profile: https://github.com/JamsusMaximus/agent-foundations-starter/blob/main/prompts/role-profile-interview.md
-- LinkedIn / career: https://github.com/JamsusMaximus/agent-foundations-starter/blob/main/prompts/linkedin-export.md
 - Goals: https://github.com/JamsusMaximus/agent-foundations-starter/blob/main/prompts/goals-template.md
+- LinkedIn / career: https://github.com/JamsusMaximus/agent-foundations-starter/blob/main/prompts/linkedin-export.md
 - Coaching style: https://github.com/JamsusMaximus/agent-foundations-starter/blob/main/prompts/coaching-style-interview.md
 - Background research: https://github.com/JamsusMaximus/agent-foundations-starter/blob/main/prompts/background-research.md
 
@@ -144,10 +147,27 @@ are one-question-at-a-time interviews; respect that (no dumping all questions, n
 summarising between answers). This thoroughness is what makes the context solid.
 Fill missing sections **within** a partial file too; say what you're skipping.
 
-**Order (this deliberately overrides the repo README's running order):** start with
-the **role-profile interview**, then LinkedIn / career, then goals, then the
-coaching-style interview. Do **background research LAST, never first** - the user's
-own context comes first, and the research is reconciled against it once it's built.
+**Order (the same as the repo README's running order):** this order gives the user
+a first useful result after about 30 minutes, not only at the very end.
+
+1. **Role-profile interview.**
+2. **Goals.** If the course prompt that sent the user here gave you their
+   Accelerator goal (or `projects/agent-accelerator/accelerator-goal.md` exists), use
+   it in the goals interview: start from it rather than asking cold, and check how
+   their wider goals relate to it. If they're stuck on a goal, offer the three
+   example goals in `prompts/goals-template.md`, and say they're examples, not
+   suggestions to copy. Save `context/goals.md` (per Step 3) before moving on.
+   - **Then a short mini-synthesis: "your 90-day mission".** Based only on the role
+     profile and goals, give them 3-5 lines: their biggest goal, what's in the way,
+     and a first step they could take this week. Say it's a first draft that gets
+     sharper as the rest of the interview fills in. Keep it short, invite one quick
+     correction, then move on.
+3. **LinkedIn / career.**
+4. **Coaching-style interview.**
+5. **Background research LAST, never first** - the user's own context comes first,
+   and the research is reconciled against it once it's built.
+
+Every piece still runs: none is cut to get to the mission sooner.
 
 **On every question, do these three things:**
 
@@ -233,6 +253,17 @@ any web research. Then pick the route by what your surface can do:
     Instead paste the guardrails text inline under a "Safety rules" heading, or add an
     explicit line: "Read `guardrails.md` and the files in `context/` at the start of
     every session."
+  - **Make sure `guardrails.md` actually exists first.** Most users start with an
+    empty folder, so the import and the "read `guardrails.md`" line would otherwise
+    point at nothing and the safety rules are silently lost. If there's no
+    `guardrails.md` in the folder's top level, fetch this repo's copy
+    (`https://raw.githubusercontent.com/JamsusMaximus/agent-foundations-starter/main/guardrails.md`)
+    and save it there unchanged. Never overwrite a `guardrails.md` that's already
+    there. If you can't fetch it, write the guardrails text inline under a "Safety
+    rules" heading in the instructions file instead, and don't add an import or
+    pointer to a file that isn't there. No-write surface: include it in what you hand
+    back, like the other files ("These are your safety rules. Make a file called
+    `guardrails.md` next to your instructions file and paste this in.").
 - **Always add these four standing sections to the instructions file, verbatim
   (heading and all), no matter what else changed this run.** They're what keeps the
   context current after today instead of going stale the moment the interviews end.
@@ -345,17 +376,17 @@ any web research. Then pick the route by what your surface can do:
   no folder at all (plain chat), remind them to keep these somewhere reusable - a
   Claude Project or a doc - or it's gone next session. Don't claim to have saved.
 
-## Step 4 - The synthesis (don't skip - this is what makes the context pay off)
+## Step 4 - Close the setup
 
-Once the context is solid, read everything you now know and, without being asked,
-tell them: what you understand about them and what they're really working toward,
-what you think is genuinely getting in the way - **drawing on the derailing patterns
-they named in the coaching-style step (their shadows)** - one breakthrough possible
-soon, and the first concrete step they could take today. Point to specifics in their context,
-then invite them to push back - the sharpest insight usually comes when they correct
-your first read. (The repo's README has ready "first real chat" prompts for this.)
+Don't run a full synthesis here: the user gets that next, in a new chat, from the
+course page's Step 4 prompts (the same prompts are in this repo's README under "The
+first real chat"). Running it in a new chat proves the folder works without
+re-briefing, so doing it here as well would only repeat it.
 
-End by listing what's now covered, any remaining gaps, and a `NEEDS-VERIFYING` list.
+Instead, in one or two lines, tell them what's now saved, and that the course page's
+Step 4 prompts, run in a new chat, will show what their agent can do with it.
+
+Then list what's now covered, any remaining gaps, and a `NEEDS-VERIFYING` list.
 The folder is portable - it moves into Cowork, a coding agent, or any future tool.
 Also tell them, once, in one line: "Your agent will keep track of what you've built,
 so you can estimate time savings and see all your progress at the end."

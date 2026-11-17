@@ -10,16 +10,17 @@ Save helpful context here as we work, without waiting for me to ask: anything yo
 
 ## Set up your second brain
 
-The fastest way to fill this in (and the rest of your context) is the onboarding flow:
+To fill this in (and the rest of your context):
 
-- In Claude Code or Cowork: say **"set up my second brain"** (or run
-  `/set-up-my-second-brain`).
-- Anywhere else: open `prompts/coaching-style-interview.md`, paste it into a chat in
-  this folder, answer the questions, and replace the contents of this file with the
-  rendered system prompt.
+1. Make a folder called `secondbrain`.
+2. Open it in your AI app (Claude Code, Codex, Claude or ChatGPT).
+3. Paste in the **Master Interview Prompt** from Chapter 1 of the Agent Accelerator
+   course page.
 
-Codex / other AGENTS.md tools: write your coaching style into `AGENTS.md` instead -
-that's the file your tool loads.
+Your agent fetches the `set-up-my-second-brain` skill from this repo on GitHub and
+runs the interviews with you, one at a time. It replaces this placeholder with your
+coaching style when it's done (on Codex and other AGENTS.md tools, it writes
+`AGENTS.md` instead, since that's the file those tools load).
 
 ## Safety rules
 

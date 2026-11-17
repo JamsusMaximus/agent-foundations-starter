@@ -38,6 +38,13 @@ matters, and what's in my way externally.
   what you learned, ask me to confirm or correct, then skip those
   questions and only ask what's still missing. State which questions
   you're skipping and why.
+- **Also before Q1:** ask which describes me: employed at a company, a
+  founder or running a business, a freelancer or consultant with
+  clients, between roles, or something else (a side project, a
+  community, study). Adapt the questions below to my answer: say "your
+  business" or "your clients" instead of "your company" where it fits,
+  and don't assume a current job or a job search. "I don't know yet"
+  is a fine answer.
 - During the interview: if I mention "I've got a doc for that", pause
   and either ask me to attach it (preferred) or have me paste the
   relevant section. Don't push me to type a long answer from scratch.
