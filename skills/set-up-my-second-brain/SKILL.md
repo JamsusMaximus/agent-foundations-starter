@@ -233,17 +233,30 @@ any web research. Then pick the route by what your surface can do:
     Instead paste the guardrails text inline under a "Safety rules" heading, or add an
     explicit line: "Read `guardrails.md` and the files in `context/` at the start of
     every session."
-- **Always add these three standing sections to the instructions file, verbatim
+- **Always add these four standing sections to the instructions file, verbatim
   (heading and all), no matter what else changed this run.** They're what keeps the
   context current after today instead of going stale the moment the interviews end.
-  Append them if they're missing; never duplicate them if they're already there. This
+  Add them if they're missing; never duplicate them if they're already there. This
   applies whenever you're writing the real `CLAUDE.md` / `AGENTS.md` (including the
   "pre-existing file" case below) - it does not extend the narrow code-project
   fallback in that same bullet, which stays a single pointer line.
 
+  **Put the first one near the top**, straight after the file's title and before the
+  coaching style, so the agent reads it first: it's what makes the agent save context
+  without being asked (the question learners ask most is "how do I make it add things
+  to my second brain automatically?"). If the file has no title, make it the first
+  section.
+
+  ```
+  ## This folder is my second brain
+  Save helpful context here as we work, without waiting for me to ask: anything you learn about me, my work, my projects or my preferences that will help in future sessions. Keep it organised as you go: the right file, no duplicates, `index.md` up to date. Tell me in one line what you saved and where. The detailed rules are under "Keep this up to date" and "Where things go" below.
+  ```
+
+  **Then append the other three at the end:**
+
   ```
   ## Keep this up to date
-  When I tell you something that will still matter in future sessions (a change of role or priorities, a new project, a person I work with, a preference, a decision), save it where it belongs (see "Where things go"), then tell me in one line what you saved and where. One fact, one file: update the existing line rather than adding a duplicate. Leave out one-off task details, and anything sensitive (health, money, relationships) unless I ask. If something new contradicts a file, show me both versions and ask which is right.
+  When I tell you something, or you learn something while we work, that will still matter in future sessions (a change of role or priorities, a new project, a person I work with, a preference, a decision), save it where it belongs (see "Where things go"), then tell me in one line what you saved and where. One fact, one file: update the existing line rather than adding a duplicate. Leave out one-off task details, and anything sensitive (health, money, relationships) unless I ask. If something new contradicts a file, show me both versions and ask which is right.
   Keep `index.md` up to date: an "Active projects" list first (one line per folder in `projects/`, saying what it is and where it's at), then one line per file saying what it holds. For a folder of dated files (notes, logs), one line for the folder, not each file.
   If this folder was set up before these rules and has files that don't fit them, ask me before moving anything.
   When you notice a gap that would have made your answer better, or a file that looks stale or duplicated, say so in one line at the end of your reply and offer to fix it. Never restructure anything without asking.
@@ -321,8 +334,9 @@ any web research. Then pick the route by what your surface can do:
   placeholder), don't clobber it: merge the coaching style into a clear "How to coach
   me" section with consent, and skip it entirely if it's a code-project file - at most
   append ONE pointer line ("read `context/` each session; it's the source of truth").
-  The two standing sections above still get appended in the normal (non-code-project)
-  case, same as any other run.
+  The standing sections above still get added in the normal (non-code-project) case,
+  same as any other run: "This folder is my second brain" near the top, the rest at
+  the end.
 - **No-write surface:** output the final content for them to save, and make it
   followable by a non-technical user - don't just say "save as `context/role-profile.md`".
   For each piece, say in one plain sentence what it is and exactly how to save it in

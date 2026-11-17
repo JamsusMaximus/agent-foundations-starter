@@ -5,6 +5,9 @@ Right now it's a placeholder: until you run the **Coaching Style Interview**, yo
 agent has no custom instructions and behaves like a default Claude / Cursor / Codex
 agent.
 
+## This folder is my second brain
+Save helpful context here as we work, without waiting for me to ask: anything you learn about me, my work, my projects or my preferences that will help in future sessions. Keep it organised as you go: the right file, no duplicates, `index.md` up to date. Tell me in one line what you saved and where. The detailed rules are under "Keep this up to date" and "Where things go" below.
+
 ## Set up your second brain
 
 The fastest way to fill this in (and the rest of your context) is the onboarding flow:
@@ -30,7 +33,7 @@ them rather than asking me to re-explain who I am.
 
 ## Keep this up to date
 
-When I tell you something that will still matter in future sessions (a change of role or priorities, a new project, a person I work with, a preference, a decision), save it where it belongs (see "Where things go"), then tell me in one line what you saved and where. One fact, one file: update the existing line rather than adding a duplicate. Leave out one-off task details, and anything sensitive (health, money, relationships) unless I ask. If something new contradicts a file, show me both versions and ask which is right.
+When I tell you something, or you learn something while we work, that will still matter in future sessions (a change of role or priorities, a new project, a person I work with, a preference, a decision), save it where it belongs (see "Where things go"), then tell me in one line what you saved and where. One fact, one file: update the existing line rather than adding a duplicate. Leave out one-off task details, and anything sensitive (health, money, relationships) unless I ask. If something new contradicts a file, show me both versions and ask which is right.
 Keep `index.md` up to date: an "Active projects" list first (one line per folder in `projects/`, saying what it is and where it's at), then one line per file saying what it holds. For a folder of dated files (notes, logs), one line for the folder, not each file.
 If this folder was set up before these rules and has files that don't fit them, ask me before moving anything.
 When you notice a gap that would have made your answer better, or a file that looks stale or duplicated, say so in one line at the end of your reply and offer to fix it. Never restructure anything without asking.
