@@ -85,6 +85,19 @@ Filenames lie - a file can be empty, a placeholder, or stale. Judge by content.
    suggest a fork: a fork of this public repo is public too.
 7. **Respect their setup** - if they have a working structure they don't want
    restructured, fill genuine gaps / fix conflicts only, with consent.
+   **A folder that already has a lot in it** (a long instructions file, dated notes,
+   an old memory export, an Obsidian vault): before the interviews, give a short
+   audit: what's there, which interview each piece will feed ("your notes/ will
+   answer most of the role questions"), and anything contradictory, duplicated or
+   stale (two instructions files, a "conflicted copy", goals from months ago).
+   - Never add new rules on top of ones they contradict: show both and ask.
+   - Move anything you replace or retire into `_archive/` (with their OK) rather
+     than overwriting or deleting it. Never overwrite
+     `projects/agent-accelerator/accelerator-goal.md` if it already has their words.
+   - Use what's already there to answer interview questions (see "File first"), and
+     only ask for what's missing.
+   - Leave app folders (`.obsidian/`, `.git/`) alone, and ask before copying anything
+     sensitive (a memory export, a journal) into a file that loads every session.
 8. **Identify the instructions file** - the file the host agent auto-loads each
    session, which is where coaching style lands. Convention differs by tool:
    `CLAUDE.md` / `claude.md` for Claude, `AGENTS.md` for Codex and most other agents.
